@@ -69,6 +69,7 @@
             <div class="modal-container">
               <span class="modal-title">Оставьте свои данные, мы вам перезвоним</span>
               <form action="modal">
+                <!-- TO DO focus effect on form -->
                 <label class="modal-label" for="username">
                   Имя
                   <input class="modal-input" type="text" name="username" id="username" required />
@@ -101,6 +102,17 @@
                     placeholder="Введите текст"
                   ></textarea>
                 </label>
+                <!-- TO DO chande svg in checkbox -->
+                <div class="modal-checkbox">
+                  <input type="checkbox" id="checkbox" class="modal-checkbox-input" />
+                  <label for="checkbox" name="checkbox">
+                    <p class="modal-checkbox-text">
+                      Соглашаюсь с рассылкой и принимаю
+                      <a href="#" class="modal-checkbox-agreament">Условия договора</a>
+                    </p>
+                  </label>
+                </div>
+                <button type="submit" class="modal-submit">Отправить</button>
               </form>
             </div>
           </div>
@@ -514,7 +526,7 @@
           </div>
         </address>
         <div class="join">
-          <p class="join-title">присоединяйтесь</p>
+          <p class="footer-title">присоединяйтесь</p>
           <ul class="footer-link-list">
             <li>
               <a
@@ -560,6 +572,28 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="subscribe">
+          <p class="footer-title">Подпишитесь на рассылку</p>
+          <div class="footer-form">
+            <form action="">
+              <label for="email">
+                <input
+                  class="footer-input"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                />
+              </label>
+            </form>
+            <button type="submit" class="footer-button">
+              Подписаться
+              <svg class="footer-form-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>

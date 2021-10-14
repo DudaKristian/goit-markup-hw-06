@@ -224,7 +224,7 @@ a.current::after {
   opacity: 1;
   transition-property: opacity, visibility;
   transition-duration: 250ms;
-  transition-timing-function: linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -296,6 +296,7 @@ a.current::after {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
+
 .icons-modal {
   position: absolute;
   left: 12px;
@@ -307,7 +308,7 @@ a.current::after {
   display: block;
   height: 120px;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 16px;
@@ -317,6 +318,63 @@ a.current::after {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 30px;
+}
+.modal-checkbox-input {
+  margin-right: 8.5px;
+  background: var(--title-color);
+}
+.modal-checkbox-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+.modal-checkbox-agreament {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+.modal-submit {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--accent-white);
+  background-color: var(--accent-color);
+  height: 50px;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-submit:hover,
+.modal-submit:focus {
+  background-color: #188ce8;
 }
 /* Advantages */
 .advantage-title {
@@ -633,7 +691,7 @@ a.current::after {
 .join {
   margin-left: 70px;
 }
-.join-title {
+.footer-title {
   text-transform: uppercase;
   color: var(--accent-white);
   font-weight: 700;
@@ -661,4 +719,62 @@ a.current::after {
 .footer-link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
+}
+.subscribe {
+  margin-left: auto;
+  margin-right: 0;
+}
+.footer-form {
+  display: flex;
+}
+.footer-input {
+  display: block;
+  min-width: 358px;
+  height: 50px;
+  padding: 15px;
+
+  background-color: transparent;
+  color: var(--accent-white);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.footer-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  width: 200px;
+  height: 50px;
+  padding: 10px, 28px;
+  margin-left: 12px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  fill: var(--accent-white);
+  color: var(--accent-white);
+  background-color: var(--accent-color);
+  border: transparent;
+
+  cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-button:hover,
+.footer-button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.footer-form-icon {
+  margin-left: 10px;
 }
